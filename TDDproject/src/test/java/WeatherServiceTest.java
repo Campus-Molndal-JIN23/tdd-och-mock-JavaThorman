@@ -23,7 +23,7 @@ public class WeatherServiceTest {
         when(weatherAPIMock.getWeatherData(forecast)).thenReturn("Mocked Weather Data");
 
         // Act
-        String result = weatherAPIMock.getWeatherData(forecast);
+        String result = weatherService.getWeatherData(forecast);
 
         // Assert
         assertEquals("Mocked Weather Data", result);
@@ -37,7 +37,7 @@ public class WeatherServiceTest {
         when(weatherAPIMock.getWeatherData(forecast)).thenReturn("");
 
         // Act
-        String result = weatherAPIMock.getWeatherData(forecast);
+        String result = weatherService.getWeatherData(forecast);
 
         // Assert
         assertEquals("", result);
@@ -51,7 +51,7 @@ public class WeatherServiceTest {
         when(weatherAPIMock.getWeatherData(forecast)).thenReturn(null);
 
         // Act
-        String result = weatherAPIMock.getWeatherData(forecast);
+        String result = weatherService.getWeatherData(forecast);
 
         // Assert
         assertNull(result);
